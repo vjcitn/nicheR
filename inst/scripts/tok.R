@@ -1,18 +1,20 @@
 # NOT TESTED
 
-library(SingleCellExperiment)
-library(Matrix)
-library(RcppCNPy)   # for loading .npy mean vectors
+#library(SingleCellExperiment)
+#library(Matrix)
+#library(RcppCNPy)   # for loading .npy mean vectors
 
 # ------------------------------------------------------------------
 # Step 1: Load technology-specific mean vector
 # (xenium_mean_script.npy, cosmx_mean_script.npy, iss_mean_script.npy)
 # ------------------------------------------------------------------
-load_tech_mean <- function(npy_path) {
-  RcppCNPy::npyLoad(npy_path)  # returns a numeric vector
-}
+#load_tech_mean <- function(npy_path) {
+#  RcppCNPy::npyLoad(npy_path)  # returns a numeric vector
+#}
 
-xen_mean = load_tech_mean(system.file("model_means", "xenium_mean_script.npy", package="nicheR"))
+library(nicheR)
+data("xenium_means", package="nicheR")
+
 
 # ------------------------------------------------------------------
 # Step 2: Size factor normalization (target = 10,000 counts per cell)
