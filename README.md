@@ -26,4 +26,12 @@ An `nn_module` containing 47,115,124 parameters.
 
 - retrieve and cache pretrained weights
 
-    - getNicheResource("nicheformer_weights.safetensors")
+    - `getNicheResource("nicheformer_weights.safetensors")`
+    - `library(BiocFileCache)`
+    - `ca = BiocFileCache()`
+    - `wpa = bfcquery(ca, "nicheformer_weights")$rpath`
+
+- load pretrained weights
+ 
+    - `load_nicheformer_weights(nn, wpa)`
+
