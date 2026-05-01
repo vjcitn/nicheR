@@ -20,6 +20,9 @@
 #' retrieve (and cache if necessary) weights or example data for
 #' nicheformer
 #' @param entity "lungx.zip" (27MB) or "nicheformer_weights.safetensors" (197MB)
+#' @return if requesting safetensors, a character path to the cached file; if
+#' requesting lungx.zip,  character path to the cached zip file with the alabaster
+#' serialization of the SCE
 #' @examples
 #' zpa = getNicheResource("lungx.zip")
 #' td = tempdir()

@@ -34,7 +34,11 @@ An `nn_module` containing 47,115,124 parameters.
 
 - retrieve and cache pretrained weights
 
-    - `getNicheResource("nicheformer_weights.safetensors")`
+    - `getNicheResource("nicheformer_weights.safetensors")` 
+        - cache is checked for availability of this weights file
+        - if not present
+             - file is retrieved from Open Storage Network
+             - file is placed in BiocFileCache
     - `library(BiocFileCache)`
     - `ca = BiocFileCache()`
     - `wpa = bfcquery(ca, "nicheformer_weights")$rpath`
@@ -43,3 +47,9 @@ An `nn_module` containing 47,115,124 parameters.
  
     - `load_nicheformer_weights(nn, wpa)`
 
+- obtain an example dataset as SingleCellExperiment
+
+   - `example(getNichResource)`
+   - note that the example data link provided at github.com/theislab/nicheformer/tree/main/data/spatialcorpus-110M/spatial/examplary-Xenium is an 18GB zip with multiple high resolution tiffs.  A
+SingleCellExperiment was extracted with gene quantifications and coordinates;
+it was saved using alabaster.  `example(getNicheResource)` will retrieve

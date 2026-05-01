@@ -10,6 +10,11 @@ getNicheResource(entity)
 \arguments{
 \item{entity}{"lungx.zip" (27MB) or "nicheformer_weights.safetensors" (197MB)}
 }
+\value{
+if requesting safetensors, a character path to the cached file; if
+requesting lungx.zip,  character path to the cached zip file with the alabaster
+serialization of the SCE
+}
 \description{
 retrieve (and cache if necessary) weights or example data for
 nicheformer
