@@ -1,6 +1,8 @@
 # nicheR
 
-nicheR is an attempt at "pure R" nicheformer
+nicheR is an attempt at "pure R" nicheformer.  See [theislab github](https://github.com/theislab/nicheformer)
+for the python code base.  See also the [preprint](https://www.biorxiv.org/content/10.1101/2024.04.15.589472v2)
+by Schaar et al.
 
 - use R 4.6 if possible
 
