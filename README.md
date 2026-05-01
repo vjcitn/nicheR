@@ -4,6 +4,12 @@ nicheR is an attempt at "pure R" nicheformer.  See [theislab github](https://git
 for the python code base.  See also the [preprint](https://www.biorxiv.org/content/10.1101/2024.04.15.589472v2)
 by Schaar et al.
 
+Code in this repository was negotiated with Claude Sonnet.  The objective is 
+to understand whether python interoperation can be avoided without loss
+of functionality or performance.
+
+As of May 1 the following steps should succeed.  See the repo issues for work to be done.
+
 - use R 4.6 if possible
 
 - installation
